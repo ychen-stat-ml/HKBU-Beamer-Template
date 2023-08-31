@@ -1,0 +1,230 @@
+% Copyright 2016 by Wang Kunzhen <wangkunzhen1993@gmail.com>.
+%
+% This is a latex template adapted from Till Tantau's Beamer template.
+% It adds theme customizations for the convenience of users from the
+% National University of Singapore. 
+% 
+% In principle, this file can be redistributed and/or modified under
+% the terms of the GNU Public License, version 2.
+%
+% However, this file is supposed to be a template to be modified
+% for your own needs. For this reason, if you use this file as a
+% template and not specifically distribute it as part of a another
+% package/program, I grant the extra permission to freely copy and
+% modify this file as you see fit and even to delete this copyright
+% notice. 
+
+\documentclass[xcolor=dvipsnames,professionalfonts,ignorenonframetext,aspectratio=169,10pt]{beamer}
+
+\usetheme{AnnArbor}
+
+\definecolor{hkbu-red}{RGB}{239,124,0}
+% \definecolor{hkbu-orange}{RGB}{217, 178, 125}
+\definecolor{hkbu-orange}{RGB}{211, 175, 126}
+\definecolor{hkbu-white}{RGB}{255,255,255}
+% \definecolor{hkbu-blue}{RGB}{0, 72, 157}
+\definecolor{hkbu-blue}{RGB}{0, 82, 155}
+\definecolor{hkbu-black}{RGB}{0,0,0}
+\definecolor{beamer@gray}{RGB}{210,210,210}
+\definecolor{beamer@gray2}{RGB}{244,244,244}
+
+% Uncomment this section if you want the title background for each slide to be gradient like decaying from hkbu-orange to hkbu-white.
+% \useoutertheme{shadow}
+% \usepackage{tikz}
+% \usetikzlibrary{shadings}
+% \colorlet{titleleft}{hkbu-orange}
+% \colorlet{titleright}{hkbu-orange!45!hkbu-white}
+% \makeatletter
+% \pgfdeclarehorizontalshading[titleleft,titleright]{beamer@frametitleshade}{\paperheight}{%
+%   color(0pt)=(titleleft);
+%   color(\paperwidth)=(titleright)}
+% \makeatother
+% End of gradient slide title effect.
+
+\setbeamercolor{section in head/foot}{bg=hkbu-blue, fg=hkbu-white}
+\setbeamercolor{subsection in head/foot}{bg=hkbu-orange, fg=hkbu-white}
+% \setbeamercolor{frametitle}{bg=hkbu-orange, fg=hkbu-black}
+\setbeamercolor{frametitle}{bg=hkbu-orange, fg=hkbu-white}
+\setbeamercolor{title}{bg=hkbu-orange, fg=hkbu-white}
+\setbeamercolor{alerted text}{fg=hkbu-red}
+\setbeamercolor{block title}{fg=hkbu-blue}
+\setbeamercolor{block body}{fg=hkbu-black}
+
+% Setup blocks
+\setbeamercolor{block title}{fg = white, bg = hkbu-blue}
+\setbeamercolor{block body}{fg=black, bg=beamer@gray2}
+
+\setbeamercolor{block title alerted}{fg = white, bg = hkbu-orange}
+\setbeamercolor{block body alerted}{fg=black, bg=beamer@gray2}
+
+\setbeamercolor{block title example}{fg = black, bg = beamer@gray}
+\setbeamercolor{block body example}{fg=black,bg=beamer@gray2}
+
+\setbeamercolor{item projected}{fg=white,bg=hkbu-blue}
+
+
+\setbeamertemplate{theorems}[numbered]
+\setbeamertemplate{propositions}[numbered]
+
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+
+% \setbeamertemplate{itemize items}[square]
+\setbeamertemplate{itemize item}{\color{hkbu-blue}$\bullet$}
+
+\setbeamertemplate{headline}{}
+% \setbeamertemplate{footline}[frame number]
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor~~\beamer@ifempty{\insertshortinstitute}{}{(\insertshortinstitute)}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{subsection in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+    \usebeamerfont{date in head/foot}\insertsection\hfill%
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+
+\usepackage{eso-pic}
+\usepackage{svg}
+
+\beamertemplatenavigationsymbolsempty
+
+% \newcommand\AtPagemyUpperLeft[1]{\AtPageLowerLeft{%
+% \put(\LenToUnit{0.71\paperwidth},\LenToUnit{0.91\paperheight}){#1}}}
+% \AddToShipoutPictureFG{
+%   % \AtPagemyUpperLeft{{\includegraphics[width=3.5cm,keepaspectratio]{logo.png}}}
+%   \AtPagemyUpperLeft{{\includegraphics[width=3.5cm,keepaspectratio]{Daco_5429558 - Copy.png}}}
+% }%
+
+
+\setbeamertemplate{title page}[default][colsep=-4bp,rounded=true, shadow=true]
+
+\title[A Beamer Template for HKBU]{A Beamer Template for \\
+Hong Kong Baptist University}
+
+% \subtitle{Sub-title}
+
+\author[First Last]
+{First Last}
+
+% \institute[HKBU]{\includegraphics[width=6cm]{hkbu-comp.png}}
+\institute[HKBU]{
+\includegraphics[height=0.7cm]{Daco_5429558.png}
+}
+
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{First Main Section}
+
+\subsection{First Subsection}
+\begin{frame}{First Slide Title}{Optional Subtitle}
+  \begin{itemize}
+  \item {
+    My first point.
+  }
+  \item {
+    My second point.
+  }
+  \end{itemize}
+\end{frame}
+
+\subsection{Second Subsection}
+% You can reveal the parts of a slide one at a time
+% with the \pause command:
+\begin{frame}{Second Slide Title}
+  \begin{itemize}
+  \item {
+    First item.
+    \pause % The slide will pause after showing the first item
+  }
+  % You can also specify when the content should appear
+  % by using <n->:
+  \item<3-> {
+    Third item.
+  }
+  % or you can use the \uncover command to reveal general
+  % content (not just \items):
+  \item<5-> {
+    Fifth item. \uncover<6->{Extra text in the fifth item.}
+  }
+  \end{itemize}
+\end{frame}
+
+\section{Second Main Section}
+
+\subsection{Second Subsection}
+\begin{frame}{Main Theorem}
+\begin{theorem}
+Theorem Statements. Example for citation \cite{Author1990}.
+\end{theorem}
+
+\begin{proof}
+Proof of the theorem goes here.
+\end{proof}
+\end{frame}
+
+% Placing a * after \section means it will not show in the
+% outline or table of contents.
+\section*{Summary}
+
+\begin{frame}{Summary}
+  \begin{itemize}
+  \item
+    The \alert{first main message} of your talk in one or two lines.
+  \item
+    The \alert{second main message} of your talk in one or two lines.
+  \item
+    Perhaps a \alert{third message}, but not more than that.
+  \end{itemize}
+  
+  \begin{itemize}
+  \item
+    Outlook
+    \begin{itemize}
+    \item
+      Something you haven't solved.
+    \item
+      Something else you haven't solved.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% Bibliography section. Use \bibitem to add more bibliography items.
+\section*{Bibliography}
+\begin{frame}{Bibliography}
+  \begin{thebibliography}{10}
+
+  \bibitem{Author1990}
+    A.~Author.
+    \newblock {\em Handbook of Everything}.
+    \newblock Some Press, 1990.
+
+  \bibitem{Someone2000}
+    S.~Someone.
+    \newblock On this and that.
+    \newblock {\em Journal of This and That}, 2(1):50--100,
+    2000.
+
+  \end{thebibliography}
+\end{frame}
+
+\end{document}
